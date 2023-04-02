@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <WilsonNavBar></WilsonNavBar>
+      <MenuStack></MenuStack>
     </div>
   );
 }
