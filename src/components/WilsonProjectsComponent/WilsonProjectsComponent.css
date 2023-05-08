@@ -1,0 +1,35 @@
+.projects-flow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  margin: 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px #000;
+  max-width: 80vw;
+  width: 80vw;
+
+  min-height: 20vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card:hover {
+  
+}
+
+.project-card-technologies {
+  list-style: none;
+  text-align: end;
+  max-width: 30vw;
+}
+
+.project-card-technologies li {
+  display: inline-flex;
+  margin: 5px;
+}

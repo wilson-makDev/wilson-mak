@@ -1,0 +1,66 @@
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { motion } from "framer-motion";
+import './MenuStack.css';
+
+interface MenuItemProps {
+  name: string;
+  iconName: string;
+  alt: string;
+  current: boolean;
+}
+
+const MenuItem = ({name, iconName, alt, current}: MenuItemProps) => {
+  const imgAddrFull = '/icons/' + iconName;
+  
+  return (<div>
+    <span className={current ? 'selectedMenuItem menuItem' : 'menuItem'}>
+      <img 
+        src={imgAddrFull} alt={alt}
+        width="15"
+        height="15"  
+        style={{marginRight: 10}}
+      >
+      </img>
+      <text>{name}</text>
+    </span>
+  </div>)
+}
+
+const MenuStack = () => {
+  const currentItem = 'about';
+
+  const options : {name: string, iconName: string, alt: string}[] = [
+    {name: 'Home', iconName: 'home.png', alt: 'Home'},
+    {name: 'About', iconName: 'about.png', alt: 'About'},
+    {name: 'Career', iconName: 'career.png', alt: 'Career'},
+    {name: 'Projects', iconName: 'projects.png', alt: 'Projects'},
+    {name: 'School', iconName: 'school.png', alt: 'School'},
+    // {name: 'Hobbies', iconName: 'hobbies.png', alt: 'Hobbies'},
+    {name: 'Resume', iconName: 'resume.png', alt: 'Resume'}
+  ];
+
+  return (
+    <ButtonGroup className='menuStackContainer'
+      vertical
+      >
+      {options.map((option, i) => {
+        return (
+          <motion.a key={i}
+                    whileHover={{scale: 1.2}}
+                    style={{marginBottom: 10}}
+                    >
+            <MenuItem name={option.name} 
+                      iconName={option.iconName} 
+                      alt={option.alt} 
+                      current={option.name.toLowerCase() === currentItem.toLowerCase()}
+                    ></MenuItem>
+          </motion.a>
+        )
+      })}
+    </ButtonGroup>
+  )
+}
+
+export default MenuStack;
+
+//In mobile resolution, just show icons for each menu item
