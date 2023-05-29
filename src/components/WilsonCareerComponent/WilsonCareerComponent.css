@@ -1,19 +1,19 @@
-.career-container {  
+.career-container { 
   display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 10% 5% 35% 35% 15% 10%;
+  grid-template-columns: 2fr 0.75fr 0.25fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1.5fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "job-selector-area job-selector-area"
-    ". ."
-    "job-description-area job-info-area"
-    "job-description-area ."
-    ". ."
-    "job-skills-area job-skills-area";
+    "job-selector-area job-selector-area ."
+    "job-description-area job-date-area job-date-label"
+    "job-description-area job-position-area job-position-label"
+    "job-description-area job-company-area job-company-label"
+    "job-description-area job-skills-area job-skills-label";
 
-  padding: 0 10vw;
+    padding: 0 5vw;
 }
+
 
 .job-selector-area { 
   grid-area: job-selector-area;
@@ -25,8 +25,7 @@
 
 .job-selector-options {
   display: inherit;
-  justify-content: end
-  ;
+  justify-content: end;
 }
 
 .job-option {
@@ -51,24 +50,52 @@
 
 .job-skills-area { 
   grid-area: job-skills-area;
+  font-size: small;
 
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-evenly;
+  justify-content: end;
+  align-content: start;
 }
 
 .job-skill {
-  margin: 0.25rem;
+  margin-left: 0.25rem;
+  margin-bottom: 0;
   color: rgb(85, 85, 85);
 }
 
 .job-description-area {
   grid-area: job-description-area;
+  padding-right: 2rem;
 }
 
 
 .job-description-area div { 
   margin-bottom: 1rem;
   margin-right: 2rem;
+}
+
+.job-date-area { grid-area: job-date-area; }
+
+.job-position-area { grid-area: job-position-area; }
+
+.job-company-area { grid-area: job-company-area; }
+
+.job-date-area p, .job-position-area p, .job-company-area p {
+  font-size: small;
+  text-align: end;
+}
+
+.job-date-label { grid-area: job-date-label; }
+
+.job-position-label { grid-area: job-position-label; }
+
+.job-company-label { grid-area: job-company-label; }
+
+.job-skills-label { grid-area: job-skills-label; }
+
+.job-date-label p, .job-position-label p, .job-company-label p, .job-skills-label p {
+  font-size: small;
+  margin-left: 1rem;
+  color: rgb(0, 155, 0);
 }

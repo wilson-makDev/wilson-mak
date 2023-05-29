@@ -38,7 +38,7 @@ const WilsonCareerComponent = () => {
         'Developed over 70 unit test suites using the Jasmine and Karma frameworks to ensure thorough coverage and effective, bug-free operation of all components and services',
         'Collaborated through Azure DevOps and git source control to manage and maintain files and user stories throughout the development process, including dozens of releases leading up to and following the launch'
       ],
-      skills:[]
+      skills:['Angular', 'TypeScript', 'HTML', 'CSS', 'JavaScript', 'Jasmine', 'Karma', 'Azure DevOps', 'Git']
     }
   }
 
@@ -57,15 +57,35 @@ const WilsonCareerComponent = () => {
             <div key={index}>{description}</div>
           ))}
       </div>
-      <div className="job-info-area">
-        <p style={{fontSize: "small"}}>{content[career].dateRange}</p>
+
+      <div className="job-date-area">
+        <p>{content[career].dateRange}</p>
+      </div>
+      <div className="job-position-area">
         <p>{content[career].position}</p>
+      </div>
+      <div className="job-company-area">
         <p>{content[career].company}</p>
       </div>
+
       <div className="job-skills-area">
           {content[career].skills.map((skill, index) => (
             <div className='job-skill' key={index}>{skill}</div>
           ))}
+      </div>
+
+      <div className="job-date-label">
+        <p>Date</p>
+      </div>
+      <div className="job-position-label">
+        <p >Position</p>
+      </div>
+      <div className="job-company-label">
+        <p>Company</p>
+      </div>
+
+      <div className="job-skills-label">
+        <p>Skills</p>
       </div>
     </div>
   )
