@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+.app-container { 
+  padding: 3vw;
+
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+  grid-template-rows: 5vh repeat(3, 1fr);
+  gap: 5vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Nav-Bar ."
+    "Side-Bar Header ."
+    "Side-Bar Career ."
+    "Side-Bar Projects ."
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Side-Bar { 
+  grid-area: Side-Bar;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Nav-Bar { 
+  grid-area: Nav-Bar;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Header, .About, .Career, .Projects, .Education { 
+  margin-left: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Header { 
+  grid-area: Header;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.About { 
+  grid-area: About; 
+}
+
+.Career { 
+  grid-area: Career; 
+}
+
+.Projects { 
+  grid-area: Projects; 
+  background-color: violet;
+}
+
+.Education { 
+  grid-area: Education; 
+  background-color: brown;
+}
+
+.Playground {
+  grid-area: Playground;
 }

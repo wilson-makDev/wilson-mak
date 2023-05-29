@@ -1,0 +1,16 @@
+.courses-flow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  margin: 10px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px #000;
+  min-width: 10vw;
+  width: 10vw;
+
+  min-height: 20vh;
+}

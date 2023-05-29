@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 80%;
+
+  justify-content: space-between;
+}
+
+.heading-primary-box {
+  color: 1C1C1C;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  min-height: 20rem;
+  flex: 1 0 36%;
+
+}
+
+.heading-primary-box h1 {
+  text-align: start;
+}
+
+.heading-primary-main {
+}
+
+.heading-primary-sub {
+  margin-bottom: 1rem;
+}
+
+.about-layout-container {
+  flex: 2 0 60%;
+  padding: 2rem 0;
+}

@@ -1,40 +1,24 @@
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { motion } from "framer-motion";
+import WilsonNavIcon from '../NavIconComponent/WilsonNavIconComponent';
+import './WilsonNavBar.css';
 
-
-interface WilsonNavIconProps {
-  linkAddr: string;
-  iconName: string;
-  iconAlt: string;
-}
-
-const WilsonNavIcon = ({linkAddr, iconName, iconAlt}: WilsonNavIconProps) => {
-  const imgAddrFull = '/icons/' + iconName;
-
-  return (
-    <Navbar.Brand href={linkAddr}>
-      <img
-        src={imgAddrFull}
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt={iconAlt}
-      />
-    </Navbar.Brand>
-  )
-}
 
 const WilsonNavBar = () => {
   return (
-    <Navbar bg="white" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">Wilson-Mak</Navbar.Brand>
-        <Container className='d-flex justify-content-end'>
+    <Navbar bg="white" expand="lg" className="nav-bar-container">
+      <span style={{width: "100vw", display: "flex", justifyContent: "space-between"}}>
+        <motion.nav whileHover={{scale: 1.05}}>
+          <Navbar.Brand href="#home">wilson-mak</Navbar.Brand>
+        </motion.nav>
+        
+        <div>
           <WilsonNavIcon linkAddr='https://www.linkedin.com/in/wilson-mak-2887b5171/' iconName='linkedin.png' iconAlt="LinkedIn Link"></WilsonNavIcon>
           <WilsonNavIcon linkAddr='https://github.com/wilson-makDev/' iconName='github.png' iconAlt="Github Link"></WilsonNavIcon>
           <WilsonNavIcon linkAddr='mailto:dev@wilson-mak.com' iconName='email.png' iconAlt="Github Link"></WilsonNavIcon>
-        </Container>
-      </Container>
+          <WilsonNavIcon linkAddr='https://linktr.ee/wilsondev/' iconName='linktr.png' iconAlt="Linktr Link"></WilsonNavIcon>
+        </div>
+      </span>
     </Navbar>
   )
 }

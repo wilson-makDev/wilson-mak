@@ -1,0 +1,54 @@
+.skills-header {
+  text-align: start;
+}
+
+.skills-container {  
+  margin-top: 1.5rem;
+
+  min-height: fit-content;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 20% 80%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "skills-header skills-header"
+    "group-selector-area skills-area";
+
+  padding: 0;
+}
+
+.skills-header { 
+  grid-area: skills-header; 
+  text-align: center;
+  text-justify: center;
+}
+
+.group-selector-area { 
+  grid-area: group-selector-area; 
+  width: min-content;
+}
+
+.skills-area { 
+  grid-area: skills-area;
+  padding-left: 3rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  align-self: top;
+}
+
+.skill-badge, .skill-badge-selected {
+  margin: 0.5rem;
+}
+
+.skill-badge {
+  color: rgb(188, 188, 188);
+}
+
+.skill-badge-selected {
+  color: rgb(0, 155, 0);
+}
