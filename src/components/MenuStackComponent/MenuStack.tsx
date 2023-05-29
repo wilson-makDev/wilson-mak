@@ -16,9 +16,8 @@ const MenuItem = ({name, iconName, alt, current}: MenuItemProps) => {
     <span className={current ? 'selectedMenuItem menuItem' : 'menuItem'}>
       <img 
         src={imgAddrFull} alt={alt}
-        width="15"
-        height="15"  
-        style={{marginRight: 10}}
+        width="20rem"
+        height="20rem"  
       >
       </img>
       <text>{name}</text>
@@ -40,16 +39,16 @@ const MenuStack = () => {
   ];
 
   return (
-    <ButtonGroup className='menuStackContainer'
-      vertical
+    <div className='menu-stack-container'
       >
       {options.map((option, i) => {
         return (
           <motion.a key={i}
                     whileHover={{scale: 1.2}}
                     style={{marginBottom: 10}}
+                    className='menu-item'
                     >
-            <MenuItem name={option.name} 
+            <MenuItem name={""} 
                       iconName={option.iconName} 
                       alt={option.alt} 
                       current={option.name.toLowerCase() === currentItem.toLowerCase()}
@@ -57,7 +56,7 @@ const MenuStack = () => {
           </motion.a>
         )
       })}
-    </ButtonGroup>
+    </div>
   )
 }
 

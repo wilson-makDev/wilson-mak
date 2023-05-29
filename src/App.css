@@ -1,0 +1,57 @@
+.app-container { 
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+  grid-template-rows: 5vh repeat(6, 95vh);
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Nav-Bar ."
+    "Side-Bar Header ."
+    "Side-Bar About ."
+    "Side-Bar Career ."
+    "Side-Bar Projects ."
+    "Side-Bar Education ."
+    "Playground Playground Playground"
+}
+
+.Side-Bar { 
+  grid-area: Side-Bar;
+  z-index: 1;
+}
+
+.Nav-Bar { 
+  grid-area: Nav-Bar;
+}
+
+.Header, .About, .Career, .Projects, .Education { 
+  margin-left: 3rem;
+}
+
+.Header { 
+  grid-area: Header;
+}
+
+.About { 
+  grid-area: About; 
+}
+
+.Career { 
+  grid-area: Career; 
+  /* background-color: rgb(213, 213, 255); */
+}
+
+.Projects { 
+  grid-area: Projects; 
+  background-color: violet;
+}
+
+.Education { 
+  grid-area: Education; 
+  background-color: brown;
+}
+
+.Playground {
+  grid-area: Playground;
+}

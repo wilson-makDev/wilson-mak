@@ -1,0 +1,74 @@
+.career-container {  
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 10% 5% 35% 35% 15% 10%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "job-selector-area job-selector-area"
+    ". ."
+    "job-description-area job-info-area"
+    "job-description-area ."
+    ". ."
+    "job-skills-area job-skills-area";
+
+  padding: 0 10vw;
+}
+
+.job-selector-area { 
+  grid-area: job-selector-area;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.job-selector-options {
+  display: inherit;
+  justify-content: end
+  ;
+}
+
+.job-option {
+  margin: 0 0 0 1rem;
+  color: rgb(188, 188, 188);
+}
+
+.job-option:hover {
+  color: rgb(140, 140, 140);
+}
+
+.job-option-selected {
+  margin: 0 0 0 1rem;
+  border-bottom: solid 1px green;
+  color: rgb(60, 60, 60);
+}
+
+.job-info-area { 
+  grid-area: job-info-area;
+  text-align: end;
+}
+
+.job-skills-area { 
+  grid-area: job-skills-area;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.job-skill {
+  margin: 0.25rem;
+  color: rgb(85, 85, 85);
+}
+
+.job-description-area {
+  grid-area: job-description-area;
+}
+
+
+.job-description-area div { 
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}

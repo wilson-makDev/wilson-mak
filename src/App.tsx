@@ -1,24 +1,41 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MenuStack from './components/MenuStackComponent/MenuStack';
 import WilsonNavBar from './components/WilsonNavBar/WilsonNavBar';
-import { Row, Col } from 'react-bootstrap';
-import WilsonContent from './components/WilsonContentComponent/WilsonContent';
+import WilsonHeaderComponent from './components/WilsonHeaderComponent/WilsonHeaderComponent';
+import WilsonAboutComponent from './components/WilsonAboutComponent/WilsonAboutComponent';
+import WilsonCareerComponent from './components/WilsonCareerComponent/WilsonCareerComponent';
+import WilsonProjectsComponent from './components/WilsonProjectsComponent/WilsonProjectsComponent';
+import WilsonSchoolComponent from './components/WilsonSchoolComponent/WilsonSchoolComponent';
+import CloudComponent from './components/CloudComponent/CloudComponent';
+import MenuStack from './components/MenuStackComponent/MenuStack';
 
 function App() {
   return (
-    <div style={{padding: "5vh 10vw"}}>
-      <WilsonNavBar></WilsonNavBar>
-      <Row style={{height: '100%', zIndex: 1}} >
-        <Col>
-          <WilsonContent></WilsonContent>
-        </Col>
-        <Col style={{maxWidth: 130}}>
-          <div style={{position: 'fixed', top: "35vh", right: "2vw"}}>
-            <MenuStack></MenuStack>
-          </div>
-        </Col>
-      </Row>
+    <div className="app-container">
+      <div className="Side-Bar">
+        <MenuStack></MenuStack>
+      </div>
+      <div className="Nav-Bar">
+        <WilsonNavBar></WilsonNavBar>
+      </div>
+      <div className="Header">
+        <WilsonHeaderComponent></WilsonHeaderComponent>
+      </div>
+      <div className="About">
+        <WilsonAboutComponent></WilsonAboutComponent>
+      </div>
+      <div className="Career">
+        <WilsonCareerComponent></WilsonCareerComponent>
+      </div>
+      <div className="Projects">
+        <WilsonProjectsComponent></WilsonProjectsComponent>
+      </div>
+      <div className="Education">
+        <WilsonSchoolComponent></WilsonSchoolComponent>
+      </div>
+      <div className="Playground">
+
+      </div>
     </div>
   );
 }

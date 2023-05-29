@@ -40,14 +40,14 @@ const WilsonProjectsComponent = () => {
       technologies: ['Howl.js', 'Node.js', 'Express.js', 'MongoDB', 'React.js', 'TypeScript', 'HTML', 'CSS', 'Websockets', 'AWS', 'Docker', 'nginx'],
       images: []
     },
-    {
-      name:'Pintos Operating Systems (CSCC69)',
-      link:'',
-      dateRange:'May 2022 - August 2022',
-      description:"",
-      technologies:['C', 'Docker', 'QEMU', 'GDB'],
-      images:[]
-    },
+    // {
+    //   name:'Pintos Operating Systems (CSCC69)',
+    //   link:'',
+    //   dateRange:'May 2022 - August 2022',
+    //   description:"",
+    //   technologies:['C', 'Docker', 'QEMU', 'GDB'],
+    //   images:[]
+    // },
     {
       name:'PickEasy Rewards (CSCC01)',
       link:'',
@@ -56,14 +56,14 @@ const WilsonProjectsComponent = () => {
       technologies:['Quasar', 'Vue', 'HTML', 'CSS', 'Javascript'],
       images:[]
     },
-    {
-      name:'Shoop (CSCB07)',
-      link:'',
-      dateRange:'Sept 2019 - Dec 2019',
-      description:"",
-      technologies:['Java', 'Android Studio', 'Gradle', 'XML', 'SQLite'],
-      images:[]
-    }
+    // {
+    //   name:'Shoop (CSCB07)',
+    //   link:'',
+    //   dateRange:'Sept 2019 - Dec 2019',
+    //   description:"",
+    //   technologies:['Java', 'Android Studio', 'Gradle', 'XML', 'SQLite'],
+    //   images:[]
+    // }
   ]
 
 

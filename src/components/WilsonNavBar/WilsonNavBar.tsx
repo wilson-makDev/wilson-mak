@@ -1,11 +1,12 @@
 import Navbar from 'react-bootstrap/Navbar';
 import { motion } from "framer-motion";
 import WilsonNavIcon from '../NavIconComponent/WilsonNavIconComponent';
+import './WilsonNavBar.css';
 
 
 const WilsonNavBar = () => {
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar bg="white" expand="lg" className="nav-bar-container">
       <span style={{width: "100vw", display: "flex", justifyContent: "space-between"}}>
         <motion.nav whileHover={{scale: 1.05}}>
           <Navbar.Brand href="#home">wilson-mak</Navbar.Brand>
