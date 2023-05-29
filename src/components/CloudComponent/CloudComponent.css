@@ -1,6 +1,6 @@
 .cloud-container {
   position: absolute;
-  top:45%;
+  top:35%;
   transform: translate(-30%,0);
   z-index: -1;
 }

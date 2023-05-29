@@ -1,19 +1,16 @@
 .app-container { 
-  padding: 2rem;
+  padding: 3vw;
 
   display: grid;
   grid-template-columns: 7% 86% 7%;
-  grid-template-rows: 5vh repeat(6, 95vh);
-  gap: 0px 0px;
+  grid-template-rows: 5vh repeat(3, 1fr);
+  gap: 5vh 0px;
   grid-auto-flow: row;
   grid-template-areas:
     ". Nav-Bar ."
     "Side-Bar Header ."
-    "Side-Bar About ."
     "Side-Bar Career ."
     "Side-Bar Projects ."
-    "Side-Bar Education ."
-    "Playground Playground Playground"
 }
 
 .Side-Bar { 

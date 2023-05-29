@@ -1,26 +1,23 @@
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { motion } from "framer-motion";
 import './MenuStack.css';
 
 interface MenuItemProps {
   name: string;
   iconName: string;
-  alt: string;
   current: boolean;
 }
 
-const MenuItem = ({name, iconName, alt, current}: MenuItemProps) => {
+const MenuItem = ({name, iconName, current}: MenuItemProps) => {
   const imgAddrFull = '/icons/' + iconName;
   
   return (<div>
     <span className={current ? 'selectedMenuItem menuItem' : 'menuItem'}>
       <img 
-        src={imgAddrFull} alt={alt}
+        src={imgAddrFull} alt={name}
         width="20rem"
         height="20rem"  
       >
       </img>
-      <text>{name}</text>
     </span>
   </div>)
 }
@@ -28,14 +25,12 @@ const MenuItem = ({name, iconName, alt, current}: MenuItemProps) => {
 const MenuStack = () => {
   const currentItem = 'about';
 
-  const options : {name: string, iconName: string, alt: string}[] = [
-    {name: 'Home', iconName: 'home.png', alt: 'Home'},
-    {name: 'About', iconName: 'about.png', alt: 'About'},
-    {name: 'Career', iconName: 'career.png', alt: 'Career'},
-    {name: 'Projects', iconName: 'projects.png', alt: 'Projects'},
-    {name: 'School', iconName: 'school.png', alt: 'School'},
-    // {name: 'Hobbies', iconName: 'hobbies.png', alt: 'Hobbies'},
-    {name: 'Resume', iconName: 'resume.png', alt: 'Resume'}
+  const options : {name: string, iconName: string}[] = [
+    {name: 'Home', iconName: 'home.png'},
+    {name: 'Career', iconName: 'career.png'},
+    {name: 'Projects', iconName: 'projects.png'},
+    {name: 'School', iconName: 'school.png'},
+    {name: 'Resume', iconName: 'resume.png'}
   ];
 
   return (
@@ -48,9 +43,8 @@ const MenuStack = () => {
                     style={{marginBottom: 10}}
                     className='menu-item'
                     >
-            <MenuItem name={""} 
+            <MenuItem name={option.name} 
                       iconName={option.iconName} 
-                      alt={option.alt} 
                       current={option.name.toLowerCase() === currentItem.toLowerCase()}
                     ></MenuItem>
           </motion.a>

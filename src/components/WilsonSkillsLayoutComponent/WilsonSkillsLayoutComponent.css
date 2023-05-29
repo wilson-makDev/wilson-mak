@@ -3,16 +3,18 @@
 }
 
 .skills-container {  
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
+
+  min-height: fit-content;
 
   display: grid;
-  grid-template-columns: 20% 10% 50% 20%;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 20% 80%;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". skills-header skills-header ."
-    ". group-selector-area skills-area .";
+    "skills-header skills-header"
+    "group-selector-area skills-area";
 
   padding: 0;
 }
