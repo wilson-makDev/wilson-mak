@@ -29,7 +29,6 @@ const MenuStack = () => {
     {name: 'Home', iconName: 'home.png'},
     {name: 'Career', iconName: 'career.png'},
     {name: 'Projects', iconName: 'projects.png'},
-    // {name: 'Education', iconName: 'school.png'},
   ];
 
   return (
