@@ -75,12 +75,12 @@
 }
 
 .project-links-area { 
-  grid-area: projects-links-area;
+  grid-area: project-links-area;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .project-header-area { grid-area: project-header-area; }

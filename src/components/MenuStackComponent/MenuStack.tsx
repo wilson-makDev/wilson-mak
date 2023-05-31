@@ -29,8 +29,7 @@ const MenuStack = () => {
     {name: 'Home', iconName: 'home.png'},
     {name: 'Career', iconName: 'career.png'},
     {name: 'Projects', iconName: 'projects.png'},
-    {name: 'Education', iconName: 'school.png'},
-    {name: 'Resume', iconName: 'resume.png'}
+    // {name: 'Education', iconName: 'school.png'},
   ];
 
   return (
@@ -56,5 +55,3 @@ const MenuStack = () => {
 }
 
 export default MenuStack;
-
-//In mobile resolution, just show icons for each menu item

@@ -9,27 +9,34 @@ import MenuStack from './components/MenuStackComponent/MenuStack';
 
 function App() {
   return (
-    <div id='home' className="app-container">
-      <div className="Side-Bar">
-        <MenuStack></MenuStack>
+    <div>
+      <div id='home' className="app-container">
+        <div className="Side-Bar">
+          <MenuStack></MenuStack>
+        </div>
+        <div className="Nav-Bar">
+          <WilsonNavBar></WilsonNavBar>
+        </div>
+        <div className="Header">
+          <CloudComponent></CloudComponent>
+          <WilsonHeaderComponent></WilsonHeaderComponent>
+        </div>
+        <div id='career' className="Career">
+          <WilsonCareerComponent></WilsonCareerComponent>
+        </div>
+        <div id='projects' className="Projects">
+          <WilsonProjectsComponent></WilsonProjectsComponent>
+        </div>
+        {/* <div id='education' className="Education">
+          <WilsonSchoolComponent></WilsonSchoolComponent>
+        </div> */}
       </div>
-      <div className="Nav-Bar">
-        <WilsonNavBar></WilsonNavBar>
-      </div>
-      <div className="Header">
-        <CloudComponent></CloudComponent>
-        <WilsonHeaderComponent></WilsonHeaderComponent>
-      </div>
-      <div id='career' className="Career">
-        <WilsonCareerComponent></WilsonCareerComponent>
-      </div>
-      <div id='projects' className="Projects">
-        <WilsonProjectsComponent></WilsonProjectsComponent>
-      </div>
-      {/* <div id='education' className="Education">
-        <WilsonSchoolComponent></WilsonSchoolComponent>
-      </div> */}
+      <div className='Footer-area'>
+          Website designed and developed by Wilson Mak
+          <a href=''>Icon Credits</a>
+        </div>
     </div>
+
   );
 }
 

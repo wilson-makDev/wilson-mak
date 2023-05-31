@@ -12,7 +12,7 @@ const WilsonNavIcon = ({linkAddr, iconName, iconAlt}: WilsonNavIconProps) => {
   const imgAddrFull = '/icons/' + iconName;
 
   return (
-    <Navbar.Brand href={linkAddr}>
+    <Navbar.Brand href={linkAddr} target="_blank" rel="noreferrer">
       <motion.img
           src={imgAddrFull}
           width="25rem"

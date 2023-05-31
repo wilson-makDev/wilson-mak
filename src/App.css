@@ -1,5 +1,6 @@
 .app-container { 
   padding: 3vw;
+  padding-bottom: 0;
 
   display: grid;
   grid-template-columns: 7% 86% 7%;
@@ -10,7 +11,7 @@
     "Nav-Bar Nav-Bar Nav-Bar"
     "Side-Bar Header ."
     "Side-Bar Career ."
-    "Side-Bar Projects ."
+    "Side-Bar Projects .";
 }
 
 .Side-Bar { 
@@ -54,6 +55,22 @@
   background-color: brown;
 }
 
-.Playground {
-  grid-area: Playground;
+.Footer-area {
+  padding: 2rem 3rem;
+
+  background-color: #000;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+a:link, a:visited { 
+  color: #ffffff;
+}
+
+a:link:hover, a:visited:hover { 
+  color: rgb(140, 140, 140);
 }
