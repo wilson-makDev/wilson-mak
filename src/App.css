@@ -3,11 +3,11 @@
 
   display: grid;
   grid-template-columns: 7% 86% 7%;
-  grid-template-rows: 5vh repeat(3, 1fr);
+  grid-template-rows: 5vh repeat(3, min-height);
   gap: 5vh 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". Nav-Bar ."
+    "Nav-Bar Nav-Bar Nav-Bar"
     "Side-Bar Header ."
     "Side-Bar Career ."
     "Side-Bar Projects ."
@@ -20,6 +20,12 @@
 
 .Nav-Bar { 
   grid-area: Nav-Bar;
+  z-index: 1;
+  position: sticky;
+  top: 0%;
+
+  background-color: white;
+  padding: 0 7%;
 }
 
 .Header, .About, .Career, .Projects, .Education { 
@@ -28,19 +34,19 @@
 
 .Header { 
   grid-area: Header;
-}
-
-.About { 
-  grid-area: About; 
+  min-height: 95vh;
 }
 
 .Career { 
-  grid-area: Career; 
+  grid-area: Career;
+  min-height: 80vh;
+  padding-top: 4rem;
 }
 
 .Projects { 
   grid-area: Projects; 
-  background-color: violet;
+  min-height: 80vh;
+  padding-top: 4rem;
 }
 
 .Education { 

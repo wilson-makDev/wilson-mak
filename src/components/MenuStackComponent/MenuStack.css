@@ -1,5 +1,6 @@
 .menu-stack-container {
   position: sticky;
+  z-index: 1;
   top: 35%;
   left: 10%;
 

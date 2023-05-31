@@ -9,7 +9,7 @@ import MenuStack from './components/MenuStackComponent/MenuStack';
 
 function App() {
   return (
-    <div className="app-container">
+    <div id='home' className="app-container">
       <div className="Side-Bar">
         <MenuStack></MenuStack>
       </div>
@@ -20,13 +20,13 @@ function App() {
         <CloudComponent></CloudComponent>
         <WilsonHeaderComponent></WilsonHeaderComponent>
       </div>
-      <div className="Career">
+      <div id='career' className="Career">
         <WilsonCareerComponent></WilsonCareerComponent>
       </div>
-      <div className="Projects">
+      <div id='projects' className="Projects">
         <WilsonProjectsComponent></WilsonProjectsComponent>
       </div>
-      {/* <div className="Education">
+      {/* <div id='education' className="Education">
         <WilsonSchoolComponent></WilsonSchoolComponent>
       </div> */}
     </div>

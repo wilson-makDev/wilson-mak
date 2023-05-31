@@ -29,7 +29,7 @@ const MenuStack = () => {
     {name: 'Home', iconName: 'home.png'},
     {name: 'Career', iconName: 'career.png'},
     {name: 'Projects', iconName: 'projects.png'},
-    {name: 'School', iconName: 'school.png'},
+    {name: 'Education', iconName: 'school.png'},
     {name: 'Resume', iconName: 'resume.png'}
   ];
 
@@ -42,6 +42,7 @@ const MenuStack = () => {
                     whileHover={{scale: 1.2}}
                     style={{marginBottom: 10}}
                     className='menu-item'
+                    href={'#' + option.name.toLowerCase()}
                     >
             <MenuItem name={option.name} 
                       iconName={option.iconName} 

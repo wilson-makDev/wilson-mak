@@ -1,9 +1,10 @@
 header {
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
   gap: 2rem;
-  height: 80%;
+
+  padding-top: 2rem;
 
   justify-content: space-between;
 }

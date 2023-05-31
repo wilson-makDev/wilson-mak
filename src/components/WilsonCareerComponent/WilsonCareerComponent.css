@@ -1,5 +1,4 @@
 .career-container {
-
   display: grid;
   grid-template-columns: 2fr 0.75fr 0.25fr;
   grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1.5fr;
