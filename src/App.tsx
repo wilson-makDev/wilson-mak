@@ -33,7 +33,7 @@ function App() {
       </div>
       <div className='Footer-area'>
           Website designed and developed by Wilson Mak
-          <a href=''>Icon Credits</a>
+          <a href='%PUBLIC_URL%/Credits.html'>Icon Credits</a>
         </div>
     </div>
 
