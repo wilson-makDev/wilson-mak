@@ -45,7 +45,7 @@ const WilsonProjectsComponent = () => {
       name: 'Wilson-Mak Portfolio',
       dateRange: 'Apr/23 - May/23',
       description: "I designed this webpage to be simple and easy to navigate with responsive design in mind.",
-      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'Bootstrap', 'Framer Motion', "HTML", "CSS"],
+      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'Bootstrap', 'Framer Motion', "HTML", "CSS"],
       images: [],
       inspiration: 'Just a place to showcase some of my amazing career opportunities and some interesting projects of mine.'
     },
