@@ -44,7 +44,7 @@ const WilsonProjectsComponent = () => {
     "Web Portfolio": {
       name: 'Wilson-Mak Portfolio',
       dateRange: 'Apr/23 - May/23',
-      description: "I designed this webpage to be simple and easy to navigate with responsive design in mind.",
+      description: "I designed this webpage to be simple and easy to navigate with responsive design in mind. Deployed on AWS using a CI/CD pipeline.",
       skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'Bootstrap', 'Framer Motion', "HTML", "CSS"],
       images: [],
       inspiration: 'Just a place to showcase some of my amazing career opportunities and some interesting projects of mine.'
