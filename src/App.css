@@ -1,6 +1,5 @@
 .app-container { 
-  padding: 3vw;
-  padding-bottom: 0;
+  padding-top: 3vw;
 
   display: grid;
   grid-template-columns: 7% 86% 7%;
@@ -31,6 +30,7 @@
 
 .Header, .About, .Career, .Projects, .Education { 
   margin-left: 3rem;
+  padding: 0 3vw;
 }
 
 .Header { 
@@ -67,10 +67,10 @@
   color: #ffffff;
 }
 
-a:link, a:visited { 
+.Footer-link, .Footer-link:visited { 
   color: #ffffff;
 }
 
-a:link:hover, a:visited:hover { 
+.Footer-link:hover { 
   color: rgb(140, 140, 140);
 }

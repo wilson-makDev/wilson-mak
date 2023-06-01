@@ -44,14 +44,13 @@ const WilsonProjectsComponent = () => {
     "Web Portfolio": {
       name: 'Wilson-Mak Portfolio',
       dateRange: 'Apr/23 - May/23',
-      description: "I designed this webpage to be simple and easy to navigate with responsive design in mind.",
-      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'Bootstrap', 'Framer Motion', "HTML", "CSS"],
+      description: "I designed this webpage to be simple and easy to navigate with responsive design in mind. Deployed on AWS using a CI/CD pipeline.",
+      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'Bootstrap', 'Framer Motion', "HTML", "CSS"],
       images: [],
       inspiration: 'Just a place to showcase some of my amazing career opportunities and some interesting projects of mine.'
     },
     "Pintos": {
       name:'Pintos Operating Systems (CSCC69)',
-      // link: {iconName: "Github", url: "https://github.com/CSCC69-S22/project-t-rex-arms"},
       dateRange:'May/22 - Aug/22',
       description:"One of my hardest course projects. This project made me a much better programmer and debugger. Lots of long nights planning, debugging and reading documentation to understand Pintos' large and complex system.",
       skills:['C++', 'Docker', 'QEMU', 'GDB', 'Teamwork'],
@@ -69,7 +68,6 @@ const WilsonProjectsComponent = () => {
     },
     "PickEasy Rewards": {
       name:'PickEasy Rewards (CSCC01)',
-      // link: {iconName: "Github", url: "https://github.com/CSCC01/team_09-project"},
       dateRange:'May/20 - Aug/20',
       description:"Over the course of many sprints, involving meetings with business stakeholders, standup meetings and sprint planning meetings, my team and I built multi-platform app that gamified food ordering through tracking purchases and awarding rewards based on different qualifiers.",
       skills:['Quasar', 'Vue', 'HTML', 'CSS', 'Javascript', 'Teamwork', 'scrum', 'System Design', 'UML'],
@@ -122,9 +120,6 @@ const WilsonProjectsComponent = () => {
         </div>
         <div className="project-description-area">
           <p>{projects[currentProject].description}</p>
-        </div>
-        <div className="project-image-area">
-          {/* The Image */}
         </div>
       </div>
     </div>

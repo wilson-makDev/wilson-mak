@@ -8,7 +8,7 @@ const WilsonHeaderComponent = () => {
     <header>
       <div className="heading-primary-box">
         <h1>
-          <div className="heading-primary-main">Hi!</div>
+          Hi!
           <div className="heading-primary-sub">My name is Wilson</div>
           <div className="heading-primary-sub">I&apos;m a <b>Software Developer</b></div>
         </h1>
@@ -20,7 +20,6 @@ const WilsonHeaderComponent = () => {
 
     </header>
 
-    //Clouds containing credits, floating in background animation using clip-path (Hosted on AWS S3, Designed By, Developed By, Icons from, Distributed via Cloud front)
   )
 }
 
