@@ -18,7 +18,7 @@ const WilsonNavBar = () => {
           <WilsonNavIcon linkAddr='https://github.com/wilson-makDev/' iconName='github.png' iconAlt="Github Link"></WilsonNavIcon>
           <WilsonNavIcon linkAddr='mailto:dev@wilson-mak.com' iconName='email.png' iconAlt="Github Link"></WilsonNavIcon>
           <WilsonNavIcon linkAddr='https://linktr.ee/wilsondev/' iconName='linktr.png' iconAlt="Linktr Link"></WilsonNavIcon>
-          <WilsonNavIcon linkAddr='%PUBLIC_URL%/Resume.pdf' iconName='resume.png' iconAlt="Resume Link"></WilsonNavIcon>
+          <WilsonNavIcon linkAddr='/Resume.pdf' iconName='resume.png' iconAlt="Resume Link"></WilsonNavIcon>
         </div>
       </span>
     </Navbar>
