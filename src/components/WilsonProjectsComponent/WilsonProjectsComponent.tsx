@@ -59,6 +59,7 @@ const WilsonProjectsComponent = () => {
     },
     "Broke": {
       name: 'Expense Tracking App',
+      link: {iconName: "Github", url: "https://github.com/wilson-makDev/Broke"},
       dateRange: 'Sep/2023',
       description: `Rapidly learned <b>Swift, SwiftUI and Coredata</b> through documentation, online lectures and developer forums in order to develop a full featured expense tracking app
                     <br/>
