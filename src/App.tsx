@@ -27,11 +27,11 @@ function App() {
         <div id='projects' className="Projects">
           <WilsonProjectsComponent></WilsonProjectsComponent>
         </div>
-      </div>
-      <div className='Footer-area'>
+        <div className='Footer-area'>
           Website designed and developed by Wilson Mak
           <a className="Footer-link" href='/Credits.html' target="_blank" rel="noreferrer">Icon Credits</a>
         </div>
+      </div>
     </div>
 
   );
