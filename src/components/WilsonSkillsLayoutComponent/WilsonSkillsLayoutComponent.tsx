@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 interface TechSnapshotProperties {
   name: string;
-  rank: number;
   group: string;
 }
 
@@ -12,30 +11,33 @@ const WilsonSkillsLayoutComponent = () => {
   const [hoverState, setHoverState] = useState('Frameworks');
 
   const techsUsed : TechSnapshotProperties[] = [
-    {name: "Angular", rank: 1, group: "Frameworks"},
-    {name: "React", rank: 2, group: "Frameworks"},
-    {name: "Node.js", rank: 3, group: "Frameworks"},
-    {name: "Express", rank: 4, group: "Frameworks"},
-    {name: "MongoDB", rank: 5, group: "Databases"},
-    {name: "MySQL", rank: 6, group: "Databases"},
-    {name: "Python", rank: 7, group: "Languages"},
-    {name: "Java", rank: 8, group: "Languages"},
-    {name: "C++", rank: 9, group: "Languages"},
-    {name: "C", rank: 10, group: "Languages"},
-    {name: "JavaScript", rank: 11, group: "Languages"},
-    {name: "TypeScript", rank: 12, group: "Languages"},
-    {name: "Git", rank: 13, group: "Tools"},
-    {name: "Github", rank: 13, group: "Tools"},
-    {name: "Docker", rank: 14, group: "Tools"},
-    {name: "AWS", rank: 15, group: "Tools"},
-    {name: "Agile", rank: 16, group: "Interpersonal"},
-    {name: "Scrum", rank: 16, group: "Interpersonal"},
-    {name: "SASS", rank: 16, group: "Languages"},
-    {name: "CSS", rank: 16, group: "Languages"},
-    {name: "HTML", rank: 16, group: "Languages"},
-    {name: "GraphQL", rank: 16, group: "Tools"},
-    {name: "RESTful API", rank: 16, group: "Tools"},
-    {name: "PHP", rank: 16, group: "Languages"},
+    {name: "Angular", group: "Frameworks"},
+    {name: "React", group: "Frameworks"},
+    {name: "Node.js", group: "Frameworks"},
+    {name: "Express", group: "Frameworks"},
+    {name: "MongoDB", group: "Databases"},
+    {name: "MySQL", group: "Databases"},
+    {name: "Python", group: "Languages"},
+    {name: "Java", group: "Languages"},
+    {name: "C++", group: "Languages"},
+    {name: "C", group: "Languages"},
+    {name: "JavaScript", group: "Languages"},
+    {name: "TypeScript", group: "Languages"},
+    {name: "Git", group: "Tools"},
+    {name: "Github", group: "Tools"},
+    {name: "Docker", group: "Tools"},
+    {name: "AWS", group: "Tools"},
+    {name: "AWS-CloudFront", group: "Tools"},
+    {name: "Agile", group: "Interpersonal"},
+    {name: "Scrum", group: "Interpersonal"},
+    {name: "SASS", group: "Languages"},
+    {name: "CSS", group: "Languages"},
+    {name: "HTML", group: "Languages"},
+    {name: "GraphQL", group: "Tools"},
+    {name: "RESTful API", group: "Tools"},
+    {name: "PHP", group: "Languages"},
+    {name: "AWS CodeBuild", group: "Tools"},
+    {name: "AWS CodePipeline", group: "Tools"},
   ];
 
 
@@ -46,7 +48,7 @@ const WilsonSkillsLayoutComponent = () => {
           <SkillHighlightMenuComponent onHover={(groupName: string) => {setHoverState(groupName)}} hoverState={hoverState}></SkillHighlightMenuComponent>
         </div>
         <div className="skills-area">
-          {techsUsed.map(({name, rank, group}, index) => (
+          {techsUsed.map(({name, group}, index) => (
             <div className={hoverState === group ? 'skill-badge-selected' : 'skill-badge'} key={index}>{name}</div>
           ))}
         </div>
