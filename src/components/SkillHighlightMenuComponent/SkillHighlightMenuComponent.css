@@ -1,3 +1,12 @@
+@media only screen and (max-width:600px) {
+  .highlight-container {  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+}
 
 .highlight-choice, .highlight-choice-selected {
   font-size: small;
