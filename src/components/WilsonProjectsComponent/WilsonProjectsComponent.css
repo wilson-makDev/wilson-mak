@@ -24,6 +24,21 @@
     overflow-y: scroll;
     margin-bottom: 1rem;
   }
+
+  .project-skills-area { 
+    grid-area: project-skills-area;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+  
+  .project-skill {
+    margin: 0 0.5rem 0.5rem 0;
+    color: rgb(85, 85, 85);
+  
+    font-size: small;
+  }
 }
 
 @media only screen and (min-width:600px) {
@@ -43,13 +58,27 @@
 
   .project-inspiration-label, .project-description-label {
     text-align: end;
-    margin-right: 1rem;
     font-size: small;
   }
 
   .project-skills-label {
     text-align: end;
     align-self: self-end;
+    font-size: small;
+  }
+
+  .project-skills-area { 
+    grid-area: project-skills-area;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+  }
+  
+  .project-skill {
+    margin: 0 0 0.5rem 0.5rem;
+    color: rgb(85, 85, 85);
+  
     font-size: small;
   }
 }
@@ -130,20 +159,7 @@
 
 .project-inspiration-area { grid-area: project-inspiration-area; }
 
-.project-skills-area { 
-  grid-area: project-skills-area;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
-  align-content: flex-start;
-}
 
-.project-skill {
-  margin: 0 0.5rem 0.5rem 0;
-  color: rgb(85, 85, 85);
-
-  font-size: small;
-}
 
 .project-description-area { grid-area: project-description-area; }
 
