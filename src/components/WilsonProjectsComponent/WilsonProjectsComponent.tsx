@@ -112,8 +112,18 @@ const WilsonProjectsComponent = () => {
     "PickEasy Rewards": {
       name:'PickEasy Rewards (CSCC01)',
       dateRange:'May/20 - Aug/20',
-      description:"Over the course of many sprints, involving meetings with business stakeholders, standup meetings and sprint planning meetings, my team and I built multi-platform app that gamified food ordering through tracking purchases and awarding rewards based on different qualifiers.",
-      skills:['Quasar', 'Vue', 'HTML', 'CSS', 'Javascript', 'Teamwork', 'scrum', 'System Design', 'UML'],
+      description:`Designed and implemented dozens of features outlined in <b>user stories</b> using the Quasar framework and Vue.js
+                  <br/>
+                  <br/>
+                  Collaborated with <b>scrum</b> team in daily stand-ups and <b>business stakeholders</b> to address bug fixes and feature implementations over the course of several week long <b>sprints</b>
+                  <br/>
+                  <br/>
+                  Applied <b>software development patterns</b> and <b>object-oriented principals</b> to improve organization, modularity, and reusability
+                  <br/>
+                  <br/>
+                  Implemented user interfaces for <b>mobile devices</b> to enhance <b>touch-based interactions</b>      
+                  `,
+      skills:['Quasar', 'Vue', 'HTML', 'CSS', 'Javascript', 'Scrum', 'System Design', 'Agile', 'Mobile Design', 'Design Patterns','UML Designing', 'Github', 'Trello'],
       images:[],
       idea: 'A project for my software engineering course that deeply immersed my teammates and I into the agile methodology, scrum, and required quick learning of new frameworks to build a fully functioning app.'
     }
