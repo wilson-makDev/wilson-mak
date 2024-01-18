@@ -52,7 +52,7 @@ const WilsonCareerComponent = () => {
           ))}
         </motion.div>
       </div>
-      <div className="job-description-area">
+      <div className="job-description-area scrollable">
         {content[career].description.map((description, index) => (
             <div key={index}>{description}</div>
           ))}

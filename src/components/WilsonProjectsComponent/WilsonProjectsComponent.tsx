@@ -145,7 +145,7 @@ const WilsonProjectsComponent = () => {
         <div className="project-header-area">
           <h1>Projects</h1>
         </div>
-        <div className="project-inspiration-area">
+        <div className="project-inspiration-area scrollable">
         <p>{projects[currentProject].idea}</p>
         </div>
         <div className="project-skills-area">
@@ -153,7 +153,10 @@ const WilsonProjectsComponent = () => {
               <div className='project-skill' key={index}>{skill}</div>
             ))}
         </div>
-        <div className="project-description-area">
+        <div className="project-description-label">
+          Description
+        </div>
+        <div className="project-description-area scrollable">
           <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(projects[currentProject].description)}}></p>
         </div>
       </div>
