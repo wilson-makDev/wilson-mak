@@ -1,90 +1,185 @@
-.career-container {
-  display: grid;
-  grid-template-columns: 2fr 0.75fr 0.25fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr 1.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "job-selector-area job-selector-area ."
-    "job-description-area job-date-area job-date-label"
-    "job-description-area job-position-area job-position-label"
-    "job-description-area job-company-area job-company-label"
-    "job-description-area job-skills-area job-skills-label";
+@media only screen and (min-width:1024px) {
+  .career-container {
+    display: grid;
+    grid-template-columns: 2fr 0.75fr 0.25fr;
+    grid-template-rows: min-content 50px 50px 100px min-content;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "job-selector-area job-selector-area ."
+      "job-description-area job-date-area job-date-label"
+      "job-description-area job-position-area job-position-label"
+      "job-description-area job-company-area job-company-label"
+      "job-description-area job-skills-area job-skills-label";
+  
+      padding: 0 5vw;
+  }
+  
+  .job-info-area { 
+    grid-area: job-info-area;
+    text-align: end;
+  }
+  
+  .job-skills-area { 
+    grid-area: job-skills-area;
+    font-size: small;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+  }
+  
+  .job-description-area {
+    grid-area: job-description-area;
+    padding-right: 2rem;
+  }
 
+  .job-selector-area { 
+    grid-area: job-selector-area;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  .job-selector-options {
+    display: inherit;
+    justify-content: flex-end;
+  }
+  
+  .job-option {
+    margin: 0 0 0 1rem;
+    color: rgb(188, 188, 188);
+  }
+  
+  .job-option:hover {
+    color: rgb(140, 140, 140);
+  }
+  
+  .job-option-selected {
+    margin: 0 0 0 1rem;
+    border-bottom: solid 1px green;
+    color: rgb(60, 60, 60);
+  }
+  
+  .job-skill {
+    margin-left: 0.25rem;
+    margin-bottom: 0;
+    color: rgb(85, 85, 85);
+  }
+  
+  .job-description-area div { 
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    width: 100%;
+  }
+  
+  .job-date-area p, .job-position-area p, .job-company-area p {
+    font-size: small;
+    text-align: end;
+  }
+  
+  .job-date-label p, .job-position-label p, .job-company-label p, .job-skills-label p {
+    font-size: small;
+    margin-left: 1rem;
+    color: rgb(0, 155, 0);
+  }
+}
+
+
+@media only screen and (max-width:1024px) {
+  .career-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content 400px repeat(4, 60px);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "job-selector-area job-selector-area "
+      "job-description-area job-description-area "
+      "job-date-label job-date-area"
+      "job-position-label job-position-area"
+      "job-company-label job-company-area "
+      "job-skills-label job-skills-area";
+  
     padding: 0 5vw;
-}
+  }
+  
+  .job-info-area { 
+    grid-area: job-info-area;
+    text-align: end;
+  }
+  
+  .job-skills-area { 
+    grid-area: job-skills-area;
+    font-size: small;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+  }
+  
+  .job-description-area {
+    grid-area: job-description-area;
+    margin-bottom: 1rem;
+    overflow-y: scroll;
+    max-height: 400px;
+  }
 
-
-.job-selector-area { 
-  grid-area: job-selector-area;
-
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.job-selector-options {
-  display: inherit;
-  justify-content: flex-end;
-}
-
-.job-option {
-  margin: 0 0 0 1rem;
-  color: rgb(188, 188, 188);
-}
-
-.job-option:hover {
-  color: rgb(140, 140, 140);
-}
-
-.job-option-selected {
-  margin: 0 0 0 1rem;
-  border-bottom: solid 1px green;
-  color: rgb(60, 60, 60);
-}
-
-.job-info-area { 
-  grid-area: job-info-area;
-  text-align: end;
-}
-
-.job-skills-area { 
-  grid-area: job-skills-area;
-  font-size: small;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-content: flex-start;
-}
-
-.job-skill {
-  margin-left: 0.25rem;
-  margin-bottom: 0;
-  color: rgb(85, 85, 85);
-}
-
-.job-description-area {
-  grid-area: job-description-area;
-  padding-right: 2rem;
-}
-
-
-.job-description-area div { 
-  margin-bottom: 1rem;
-  margin-right: 2rem;
+  .job-selector-area { 
+    grid-area: job-selector-area;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  
+  .job-selector-options {
+    display: inherit;
+    justify-content: flex-end;
+  }
+  
+  .job-option {
+    margin: 0 0 0 1rem;
+    color: rgb(188, 188, 188);
+  }
+  
+  .job-option:hover {
+    color: rgb(140, 140, 140);
+  }
+  
+  .job-option-selected {
+    margin: 0 0 0 1rem;
+    border-bottom: solid 1px green;
+    color: rgb(60, 60, 60);
+  }
+  
+  .job-skill {
+    margin-left: 0.25rem;
+    margin-bottom: 0;
+    color: rgb(85, 85, 85);
+  }
+  
+  .job-description-area div { 
+    margin-bottom: 1rem;
+  }
+  
+  .job-date-area p, .job-position-area p, .job-company-area p {
+    font-size: small;
+    text-align: end;
+  }
+  
+  .job-date-label p, .job-position-label p, .job-company-label p, .job-skills-label p {
+    font-size: small;
+    color: rgb(0, 155, 0);
+  }
 }
 
 .job-date-area { grid-area: job-date-area; }
-
+  
 .job-position-area { grid-area: job-position-area; }
 
 .job-company-area { grid-area: job-company-area; }
-
-.job-date-area p, .job-position-area p, .job-company-area p {
-  font-size: small;
-  text-align: end;
-}
 
 .job-date-label { grid-area: job-date-label; }
 
@@ -93,9 +188,3 @@
 .job-company-label { grid-area: job-company-label; }
 
 .job-skills-label { grid-area: job-skills-label; }
-
-.job-date-label p, .job-position-label p, .job-company-label p, .job-skills-label p {
-  font-size: small;
-  margin-left: 1rem;
-  color: rgb(0, 155, 0);
-}
