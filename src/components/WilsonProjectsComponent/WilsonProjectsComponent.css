@@ -20,11 +20,6 @@
     margin-top: 2rem;
   }
 
-  .project-description-area, .project-inspiration-area {
-    overflow-y: scroll;
-    margin-bottom: 1rem;
-  }
-
   .project-skills-area { 
     grid-area: project-skills-area;
     display: flex;
@@ -82,6 +77,11 @@
   
     font-size: small;
   }
+}
+
+.project-description-area, .project-inspiration-area {
+  overflow-y: scroll;
+  margin-bottom: 1rem;
 }
 
 .project-inspiration-label { grid-area: project-inspiration-label; }
