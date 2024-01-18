@@ -19,9 +19,12 @@
     grid-area: Side-Bar;
     z-index: 1;
   }
+
+  .Header, .About, .Career, .Projects, .Education {
+    margin-left: 3rem;
+    padding: 0 3vw;
+  }
 }
-
-
 
 @media only screen and (max-width:600px) {
   .app-container { 
@@ -43,6 +46,10 @@
   .Side-Bar {
     visibility: hidden;
   }
+
+  .Header, .About, .Career, .Projects, .Education {
+    margin: 0 1.5rem;
+  }
 }
 
 .Nav-Bar { 
@@ -55,10 +62,7 @@
   padding: 0 7%;
 }
 
-.Header, .About, .Career, .Projects, .Education { 
-  margin-left: 3rem;
-  padding: 0 3vw;
-}
+
 
 .Header { 
   grid-area: Header;
