@@ -59,6 +59,7 @@
   .project-inspiration-label, .project-description-label {
     text-align: end;
     font-size: small;
+    padding-right: 1rem;
   }
 
   .project-skills-label {
