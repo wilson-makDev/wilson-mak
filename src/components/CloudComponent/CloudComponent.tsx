@@ -7,7 +7,7 @@ const CloudComponent = () => {
 
   return (
     <div className='cloud-container'>
-      <motion.div animate={{x: ["-40vw", "3vw"]}} transition={{duration: 10, ease:"easeInOut"}} className='cloud-group' ref={constraintsRef}>
+      <motion.div animate={{x: ["-30vw", "3vw"]}} transition={{duration: 4, ease:"easeInOut"}} className='cloud-group' ref={constraintsRef}>
         <motion.div animate={{y: ["-.2rem", ".3rem", ".1rem", "-.2rem"]}} transition={{duration: 3, ease:"linear", repeat: Infinity}}>
           <motion.div whileHover={{scale: 1.1}} className='cloudA'>
           </motion.div>
