@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import "./WilsonProjectsComponent.css";
 import DOMPurify from "dompurify";
 
@@ -166,44 +167,48 @@ const WilsonProjectsComponent = () => {
 
 
   return (
-    <div>
-      <div className="project-container">
-        <div className="project-inspiration-label">
-          Idea
-        </div>
-        <div className="project-skills-label">
-          Skills
-        </div>
-        <div className="project-selector-area">
-            {projectNames.map((name, index) => (
-              <div className="project-selector-option" key={index}>
-                <span className="project-selector-option-date">{projects[name].dateRange}</span>
-                <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-name-selected" : "project-selector-option-name"}>{name}</span>
-              </div>
-            ))}
-        </div>
-        <div className="project-links-area">
-          <ProjectIconLink iconName={projects[currentProject].link?.iconName} url={projects[currentProject].link?.url}></ProjectIconLink>
-        </div>
-        <div className="project-header-area">
-          <h1>Projects</h1>
-        </div>
-        <div className="project-inspiration-area scrollable">
-        <p>{projects[currentProject].idea}</p>
-        </div>
-        <div className="project-skills-area">
-          {projects[currentProject].skills.map((skill, index) => (
-              <div className='project-skill' key={index}>{skill}</div>
-            ))}
-        </div>
-        <div className="project-description-label">
-          Description
-        </div>
-        <div className="project-description-area scrollable">
-          <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(projects[currentProject].description)}}></p>
-        </div>
+    <motion.div className="project-container"
+          initial={{ scale: 0.90 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{once: true}}
+          layout
+    >
+      <div className="project-inspiration-label">
+        Idea
       </div>
-    </div>
+      <div className="project-skills-label">
+        Skills
+      </div>
+      <div className="project-selector-area">
+          {projectNames.map((name, index) => (
+            <div className="project-selector-option" key={index}>
+              <span className="project-selector-option-date">{projects[name].dateRange}</span>
+              <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-name-selected" : "project-selector-option-name"}>{name}</span>
+            </div>
+          ))}
+      </div>
+      <div className="project-links-area">
+        <ProjectIconLink iconName={projects[currentProject].link?.iconName} url={projects[currentProject].link?.url}></ProjectIconLink>
+      </div>
+      <div className="project-header-area">
+        <h1>Projects</h1>
+      </div>
+      <div className="project-inspiration-area scrollable">
+      <p>{projects[currentProject].idea}</p>
+      </div>
+      <div className="project-skills-area">
+        {projects[currentProject].skills.map((skill, index) => (
+            <div className='project-skill' key={index}>{skill}</div>
+          ))}
+      </div>
+      <div className="project-description-label">
+        Description
+      </div>
+      <div className="project-description-area scrollable">
+        <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(projects[currentProject].description)}}></p>
+      </div>
+    </motion.div>
   )
 }
 

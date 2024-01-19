@@ -43,20 +43,32 @@ const WilsonCareerComponent = () => {
   }
 
   return (
-    <div className="career-container">
+    <motion.div className="career-container"
+        initial={{ scale: 0.90 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{once: true}}
+    >
       <div className="job-selector-area">
         <h1>Career @</h1>
-        <motion.div className='job-selector-options'>
+        <div className='job-selector-options'>
           {displayNames.map((displayName, index) => (
-            <h2 onClick={() => {setCareer(displayName)}} className={career === displayName ? "job-option-selected" : 'job-option'} key={index}>{displayName}</h2>
+            <h2 onClick={() => {setCareer(displayName)}} className={career === displayName ? "job-option-selected" : 'job-option'} key={index}>
+              {displayName}
+              {career === displayName ? (
+                <motion.div
+                  transition={{ duration: 0.25 }}
+                  className='underline' layoutId="underline"></motion.div>
+              ) : null}
+            </h2>
           ))}
-        </motion.div>
+        </div>
       </div>
-      <div className="job-description-area scrollable">
+      <motion.div className="job-description-area scrollable">
         {content[career].description.map((description, index) => (
             <div key={index}>{description}</div>
           ))}
-      </div>
+      </motion.div>
 
       <div className="job-date-area">
         <p>{content[career].dateRange}</p>
@@ -87,7 +99,7 @@ const WilsonCareerComponent = () => {
       <div className="job-skills-label">
         <p>Skills</p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

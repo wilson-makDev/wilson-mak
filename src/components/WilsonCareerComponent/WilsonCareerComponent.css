@@ -50,6 +50,7 @@
   .job-option {
     margin: 0 0 0 1rem;
     color: rgb(188, 188, 188);
+    position: relative;
   }
   
   .job-option:hover {
@@ -58,8 +59,8 @@
   
   .job-option-selected {
     margin: 0 0 0 1rem;
-    border-bottom: solid 1px green;
     color: rgb(60, 60, 60);
+    position: relative;
   }
   
   .job-skill {
@@ -141,6 +142,7 @@
   .job-option {
     margin: 0 0 0 1rem;
     color: rgb(188, 188, 188);
+    position: relative;
   }
   
   .job-option:hover {
@@ -149,8 +151,8 @@
   
   .job-option-selected {
     margin: 0 0 0 1rem;
-    border-bottom: solid 1px green;
     color: rgb(60, 60, 60);
+    position: relative;
   }
   
   .job-skill {
@@ -172,6 +174,15 @@
     font-size: small;
     color: rgb(0, 155, 0);
   }
+}
+
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgb(0, 155, 0);
 }
 
 .job-date-area { grid-area: job-date-area; }
