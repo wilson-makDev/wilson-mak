@@ -115,7 +115,7 @@ const WilsonProjectsComponent = () => {
       description:`Designed and implemented dozens of features outlined in <b>user stories</b> using the Quasar framework and Vue.js
                   <br/>
                   <br/>
-                  Collaborated with <b>scrum</b> team in daily stand-ups and <b>business stakeholders</b> to address bug fixes and feature implementations over the course of several week long <b>sprints</b>
+                  Collaborated with <b>scrum team of 8</b> in <b>daily stand-ups</b> and <b>business stakeholders</b> to address bug fixes and feature implementations over the course of several week long <b>sprints</b>
                   <br/>
                   <br/>
                   Applied <b>software development patterns</b> and <b>object-oriented principals</b> to improve organization, modularity, and reusability
@@ -126,6 +126,39 @@ const WilsonProjectsComponent = () => {
       skills:['Quasar', 'Vue', 'HTML', 'CSS', 'Javascript', 'Scrum', 'System Design', 'Agile', 'Mobile Design', 'Design Patterns','UML Designing', 'Github', 'Trello'],
       images:[],
       idea: 'A project for my software engineering course that deeply immersed my teammates and I into the agile methodology, scrum, and required quick learning of new frameworks to build a fully functioning app.'
+    },
+    "Class Management": {
+      name:'Class Management (CSCB20)',
+      dateRange:'Jan/20 - Apr/20',
+      description:`Designed and implemented <b>relational database schemas</b> in <b>SQLite</b> to organize student, class and teacher information to efficiently maintain and query over <b>200 entries</b>
+                  <br/>
+                  <br/>
+                   Developed <b>RESTful API</b> calls using <b>Python</b> in <b>Flask</b> framework to query, and push data entries receiving full scores for the implementation
+                   <br/>
+                   <br/>
+                   Collaborated with partner in weekly meetings and through <b>git</b> source control to manage and maintain bug fixes and feature implementations
+                   <br/>
+                   <br/>
+                   Utilized <b>Flask</b> and <b>Jinja2</b> to create modular reusable HTML, CSS code and interact with the database
+                  `,
+      skills:['Python', 'Flask', 'HTML', 'CSS', 'Javascript', 'System Design', 'SQL', 'RESTful API', 'Git', 'Github'],
+      images:[],
+      idea: 'A project for my intro to web development course that had us design and implement a database and Flask based website to manage school data.'
+    },
+    "Shoop Shopping": {
+      name:'Grocery Store App (CSCB07)',
+      dateRange:'Sep/19 - Dec/19',
+      description:`Collaborated in a <b>small group of 5</b> to create an <b>android mobile app</b> that can store and track items of a store, alongside other features such as adding new customers and promoting employees
+                  <br/>
+                  <br/>
+                  Applied <b>software development patterns</b> and <b>object-oriented programming</b>, skills to improve organization, modularity and reusability
+                  <br/>
+                  <br/>
+                  Utilized <b>Java</b> and <b>Oracle Database</b> to store, access, modify and remove data
+      `,
+      skills:['Java', 'Oracle Database', 'Android Studios', 'Design Patterns', 'OOP', 'System Design'],
+      images:[],
+      idea: 'A project for my software development course where we designed and created a java android app to shop for groceries and allow users to save and store their carts.'
     }
   }
 
