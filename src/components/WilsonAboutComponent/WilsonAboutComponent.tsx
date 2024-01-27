@@ -1,5 +1,5 @@
 import WilsonSkillsLayoutComponent from '../WilsonSkillsLayoutComponent/WilsonSkillsLayoutComponent';
-import './WilsonAboutComponent.css';
+import './WilsonAboutComponent.scss';
 
 
 const WilsonAboutComponent = () => {
