@@ -1,6 +1,6 @@
 import { Navbar } from "react-bootstrap";
 import { motion } from "framer-motion";
-import "./WilsonNavIconComponent.css";
+import './WilsonNavIconComponent.scss';
 
 interface WilsonNavIconProps {
   linkAddr: string;
@@ -15,9 +15,7 @@ const WilsonNavIcon = ({linkAddr, iconName, iconAlt}: WilsonNavIconProps) => {
     <Navbar.Brand href={linkAddr} target="_blank" rel="noreferrer">
       <motion.img
           src={imgAddrFull}
-          width="25rem"
-          height="25rem"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top icon-img"
           alt={iconAlt}
           whileHover={{scale: 1.2}}
         >
