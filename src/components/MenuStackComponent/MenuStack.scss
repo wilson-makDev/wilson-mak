@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+$menu_stack_box_shadow: #dedede;
+$menu_stack_background: #ffffffcc;
+
+.menu-stack-container {
+  position: sticky;
+  z-index: 1;
+  top: 35%;
+  left: 10%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: fit-content;
+  padding: 0.5rem;
+
+  border-radius: 7.6rem;
+  background: $menu_stack_background;
+  box-shadow:  1.6rem 1.6rem 3.2rem $menu_stack_box_shadow,
+             -1.6rem -1.6rem 3.2rem $c_background;
+}
+
+.menu-item {
+  margin: 1rem 0;
+}
