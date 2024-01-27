@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './WilsonCareerComponent.css';
+import './WilsonCareerComponent.scss';
 import { motion } from 'framer-motion';
 
 interface WilsonCareerCardProps {
@@ -66,7 +66,11 @@ const WilsonCareerComponent = () => {
       </div>
       <motion.div className="job-description-area scrollable">
         {content[career].description.map((description, index) => (
-            <div key={index}>{description}</div>
+            <div key={index}>
+              <p>
+                {description}
+              </p>
+            </div>
           ))}
       </motion.div>
 
@@ -90,7 +94,7 @@ const WilsonCareerComponent = () => {
         <p>Date</p>
       </div>
       <div className="job-position-label">
-        <p >Position</p>
+        <p>Position</p>
       </div>
       <div className="job-company-label">
         <p>Company</p>
