@@ -79,6 +79,7 @@ const WilsonProjectsComponent = () => {
     },
     "Web Portfolio": {
       name: 'Wilson-Mak Portfolio',
+      link: {iconName: "Github", url: "https://github.com/wilson-makDev/wilson-mak"},
       dateRange: 'Sep/2020 - Present',
       description: `Utilized React to create a <b>responsive</b> and <b>easy to navigate</b> webpage to showcase my projects and career opportunities
                     <br/>
