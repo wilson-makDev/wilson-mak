@@ -89,7 +89,7 @@ const WilsonProjectsComponent = () => {
                     <br/>
                     Version controlled using <b>Git</b> and <b>Github</b>
                     `,
-      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'AWS CodeBuild', 'AWS CodePipeline','Bootstrap', 'Framer Motion', "HTML", "CSS", "Github"],
+      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'AWS CodeBuild', 'AWS CodePipeline','Bootstrap', 'Framer Motion', "HTML", "SASS/SCSS", "Github"],
       images: [],
       idea: 'Just a place to showcase some of my amazing career opportunities and some interesting projects of mine. I designed this webpage to be simple and easy to navigate with responsive design in mind. Deployed on AWS using a CI/CD pipeline.'
     },
