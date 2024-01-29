@@ -1,0 +1,112 @@
+@import 'variables.scss';
+
+.app-container {
+@media only screen and (min-width:$bp-tablet) {
+  padding-top: 3vw;
+
+  display: grid;
+  grid-template-columns: 7% 86% 7%;
+  grid-template-rows: 5vh repeat(4, min-content);
+  gap: 5vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Nav-Bar Nav-Bar Nav-Bar"
+    "Side-Bar Header ."
+    "Side-Bar Career ."
+    "Side-Bar Projects ."
+    "Footer Footer Footer";
+}
+
+@media only screen and (max-width:$bp-tablet) {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5vh repeat(4, min-content);
+  gap: 5vh 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Nav-Bar"
+    "Header"
+    "Career"
+    "Projects"
+    "Footer";
+}
+  .Side-Bar {
+    @media only screen and (min-width:$bp-tablet) {
+      grid-area: Side-Bar;
+      z-index: 1;
+    }
+    
+    @media only screen and (max-width:$bp-tablet) {
+      display: none;
+    }
+  }
+
+  .Nav-Bar { 
+    grid-area: Nav-Bar;
+    z-index: 1;
+    position: sticky;
+    top: 0%;
+
+    background-color: $c_background;
+    padding: 0 7%;
+  }
+
+  @mixin section-formatting {
+    @media only screen and (min-width:$bp-tablet) {
+      margin-left: 3rem;
+      padding: 0 3vw;
+    }
+    
+    @media only screen and (max-width:$bp-tablet) {
+      margin: 0 1.5rem;
+    }
+  }
+
+  .Header { 
+    grid-area: Header;
+    min-height: 95vh;
+    @include section-formatting;
+  }
+  
+  .Career { 
+    grid-area: Career;
+    min-height: 80vh;
+    padding-top: 4rem;
+    @include section-formatting;
+  }
+  
+  .Projects { 
+    grid-area: Projects; 
+    min-height: 80vh;
+    padding-top: 4rem;
+    @include section-formatting;
+  }
+
+  .Footer-area {
+    grid-area: Footer;
+    padding: 2rem 3rem;
+  
+    background-color: $c_footer;
+  
+    display: flex;
+    justify-content: space-between;
+  
+    font-size: 0.75rem;
+    color: $c_background;
+  
+    .Footer-link, .Footer-link:visited { 
+      color: $c_background;
+    }
+  
+    .Footer-link:hover { 
+      color: $c_button_hover;
+    }
+  }
+}
+
+@media only screen and (max-width:$bp-phone) {
+  .scrollable {
+    border-left: #3d3d3d inset 1px;
+    padding-left: 0.5rem;
+  }
+}
