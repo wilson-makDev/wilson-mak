@@ -1,4 +1,4 @@
-import './CloudComponent.css';
+import './CloudComponent.scss';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 

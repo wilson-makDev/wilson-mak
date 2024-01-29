@@ -1,4 +1,6 @@
-@media only screen and (max-width:600px) {
+@import '../../variables.scss';
+
+@media only screen and (max-width:$bp-phone) {
   .highlight-container {  
     display: flex;
     flex-direction: row;
@@ -9,14 +11,14 @@
 }
 
 .highlight-choice, .highlight-choice-selected {
-  font-size: small;
+  font-size: $font-size-info;
   margin: 0.5rem 0;
 }
 
 .highlight-choice {
-  color: rgb(76, 76, 76);
+  color: $c_tertiary;
 }
 
 .highlight-choice-selected {
-  color: rgb(0, 155, 0);
+  color: $c_accent;
 }

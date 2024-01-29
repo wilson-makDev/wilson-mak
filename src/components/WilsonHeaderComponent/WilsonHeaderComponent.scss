@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+header {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  padding-top: 5rem;
+
+  justify-content: center;
+}
+
+.heading-primary {
+  &-box {
+    color: $c_primary;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  
+    min-height: 20rem;
+    flex: 1 0 36%;
+  }
+
+  &-sub {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    text-align: start;
+  }
+}
+
+.about-layout-container {
+  flex: 2 0 60%;
+  padding: 2rem 0;
+}

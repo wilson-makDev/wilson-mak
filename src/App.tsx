@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WilsonNavBar from './components/WilsonNavBar/WilsonNavBar';
 import WilsonHeaderComponent from './components/WilsonHeaderComponent/WilsonHeaderComponent';

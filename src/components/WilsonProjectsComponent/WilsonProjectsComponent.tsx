@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./WilsonProjectsComponent.css";
+import "./WilsonProjectsComponent.scss";
 import DOMPurify from "dompurify";
 
 interface ProjectIconLinkProps {
@@ -185,7 +185,7 @@ const WilsonProjectsComponent = () => {
           {projectNames.map((name, index) => (
             <div className="project-selector-option" key={index}>
               <span className="project-selector-option-date">{projects[name].dateRange}</span>
-              <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-name-selected" : "project-selector-option-name"}>{name}</span>
+              <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-option-name-selected" : "project-selector-option-name"}>{name}</span>
             </div>
           ))}
       </div>

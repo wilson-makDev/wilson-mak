@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import './MenuStack.css';
+import './MenuStack.scss';
 
 interface MenuItemProps {
   name: string;
