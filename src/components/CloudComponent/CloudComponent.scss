@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+$cloud-background_gradient_start: $c_background;
+$cloud-background_gradient_end: #e6e6e6;
+$cloud-box_shadow_1: #bababa;
+$cloud-box_shadow_2: $c_background;
+
+.cloud-container {
+  position: absolute;
+  top: 35%;
+  transform: translate(-30%, 0); //Smoother animated in scss file
+  z-index: -1;
+}
+
+.cloudA, .cloudB, .cloudC {
+  border-radius: 11.8rem;
+  background: linear-gradient(145deg, $cloud-background_gradient_start, $cloud-background_gradient_end);
+  box-shadow: 1.8rem 1.8rem 4.9rem $cloud-box_shadow_1, -1.8rem -1.8rem 4.9rem $cloud-box_shadow_2;
+}
+
+.cloudA {
+  width: 30rem;
+  height: 10rem;
+}
+
+.cloudB {
+  content: '';
+  position: absolute;
+  width: 17rem;
+  height: 15rem;
+  top: -18rem;
+  right: 4rem;
+}
+
+.cloudC {
+  content: '';
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  top: -14rem;
+  left: 5rem;
+}

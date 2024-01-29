@@ -1,3 +1,8 @@
+@import '../../variables.scss';
+
+$menu_stack_box_shadow: #dedede;
+$menu_stack_background: #ffffffcc;
+
 .menu-stack-container {
   position: sticky;
   z-index: 1;
@@ -12,15 +17,11 @@
   padding: 0.5rem;
 
   border-radius: 7.6rem;
-  background: rgb(fff, fff, fff, 0.8);
-  box-shadow:  1.6rem 1.6rem 3.2rem #dedede,
-             -1.6rem -1.6rem 3.2rem #ffffff;
+  background: $menu_stack_background;
+  box-shadow:  1.6rem 1.6rem 3.2rem $menu_stack_box_shadow,
+             -1.6rem -1.6rem 3.2rem $c_background;
 }
 
 .menu-item {
   margin: 1rem 0;
 }
-
-
-
-

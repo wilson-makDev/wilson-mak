@@ -1,0 +1,163 @@
+@import '../../variables.scss';
+
+.career-container {
+  display: grid;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+
+  @media only screen and (max-width:$bp-desktop) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: min-content 400px repeat(4, 60px);
+    grid-template-areas:
+      "job-selector-area job-selector-area "
+      "job-description-area job-description-area "
+      "job-date-label job-date-area"
+      "job-position-label job-position-area"
+      "job-company-label job-company-area "
+      "job-skills-label job-skills-area";
+  }
+
+  @media only screen and (min-width:$bp-desktop) {
+    grid-template-columns: 2fr 0.75fr 0.25fr;
+    grid-template-rows: min-content 50px 50px 100px min-content;
+    grid-template-areas:
+      "job-selector-area job-selector-area ."
+      "job-description-area job-date-area job-date-label"
+      "job-description-area job-position-area job-position-label"
+      "job-description-area job-company-area job-company-label"
+      "job-description-area job-skills-area job-skills-label";
+
+    padding: 0 5vw;
+  }
+
+  .job {
+    &-selector-area { 
+      grid-area: job-selector-area;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    &-selector-options {
+      display: inherit;
+      justify-content: flex-end;
+  
+      .underline {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $c_accent;
+      }
+    }
+
+    &-option {
+      @mixin button {
+        margin: 0 0 0 1rem;
+        position: relative;
+      }
+      @include button;
+  
+      color: $c_button;
+  
+      &:hover {
+        color: $c_button_hover;
+      }
+  
+      &-selected {
+        @include button;
+        color: $c_button_selected;
+      }
+    }
+
+    &-description-area {
+      grid-area: job-description-area;
+      @media only screen and (max-width:$bp-desktop) {
+        margin-bottom: 1rem;
+        overflow-y: scroll;
+        max-height: 400px;
+    
+        div { 
+          margin-bottom: 1rem;
+        }
+      }
+    
+      @media only screen and (min-width:$bp-desktop) {
+        padding-right: 2rem;
+    
+        div {
+          margin-bottom: 1rem;
+          margin-right: 2rem;
+          width: 100%;
+        }
+      }
+    }
+
+    &-date {
+      &-area {
+        grid-area: job-date-area;
+      }
+  
+      &-label {
+        grid-area: job-date-label;
+      }
+    }
+
+    &-position {
+      &-area {
+        grid-area: job-position-area;
+      }
+  
+      &-label {
+        grid-area: job-position-label;
+      }
+    }
+
+    &-company {
+      &-area {
+        grid-area: job-company-area;
+      }
+  
+      &-label {
+        grid-area: job-company-label;
+      }
+    }
+
+    &-skills {
+      &-area {
+        grid-area: job-skills-area;
+        font-size: $font-size-info;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: flex-start;
+
+        .job-skill {
+          margin-left: 0.25rem;
+          margin-bottom: 0;
+          color: $c_tertiary;
+        }
+      }
+  
+      &-label {
+        grid-area: job-skills-label;
+      }
+    }
+  }
+}
+
+.job-date-area p, .job-position-area p, .job-company-area p {
+  font-size: $font-size-info;
+  text-align: end;
+}
+
+.job-date-label p, .job-position-label p, .job-company-label p, .job-skills-label p {
+  font-size: $font-size-info;
+  color: $c_accent;
+
+  @media only screen and (min-width:$bp-desktop) {
+    margin-left: 1rem;
+  }
+}

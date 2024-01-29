@@ -1,4 +1,4 @@
-import './SkillHighlightMenuComponent.css';
+import './SkillHighlightMenuComponent.scss';
 
 interface SkillHighlightMenuComponentProperties {
   onHover: (groupName: string) => void;

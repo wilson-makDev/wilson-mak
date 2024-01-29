@@ -1,5 +1,5 @@
 import WilsonAboutComponent from '../WilsonAboutComponent/WilsonAboutComponent';
-import './WilsonHeaderComponent.css';
+import './WilsonHeaderComponent.scss';
 
 const WilsonHeaderComponent = () => {
 

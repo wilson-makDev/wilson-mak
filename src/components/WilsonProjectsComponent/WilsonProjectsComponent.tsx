@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import "./WilsonProjectsComponent.css";
+import "./WilsonProjectsComponent.scss";
 import DOMPurify from "dompurify";
 
 interface ProjectIconLinkProps {
@@ -89,7 +89,7 @@ const WilsonProjectsComponent = () => {
                     <br/>
                     Version controlled using <b>Git</b> and <b>Github</b>
                     `,
-      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'AWS CodeBuild', 'AWS CodePipeline','Bootstrap', 'Framer Motion', "HTML", "CSS", "Github"],
+      skills: ['React', 'Typescript','AWS-S3','AWS-CloudFront', 'CI/CD', 'AWS CodeBuild', 'AWS CodePipeline','Bootstrap', 'Framer Motion', "HTML", "SASS/SCSS", "Github"],
       images: [],
       idea: 'Just a place to showcase some of my amazing career opportunities and some interesting projects of mine. I designed this webpage to be simple and easy to navigate with responsive design in mind. Deployed on AWS using a CI/CD pipeline.'
     },
@@ -185,7 +185,7 @@ const WilsonProjectsComponent = () => {
           {projectNames.map((name, index) => (
             <div className="project-selector-option" key={index}>
               <span className="project-selector-option-date">{projects[name].dateRange}</span>
-              <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-name-selected" : "project-selector-option-name"}>{name}</span>
+              <span onClick={() => {setCurrentProject(name)}} className={currentProject === name ? "project-selector-option-name-selected" : "project-selector-option-name"}>{name}</span>
             </div>
           ))}
       </div>

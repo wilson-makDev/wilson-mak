@@ -1,4 +1,4 @@
-import './WilsonSkillsLayoutComponent.css';
+import './WilsonSkillsLayoutComponent.scss';
 import SkillHighlightMenuComponent from '../SkillHighlightMenuComponent/SkillHighlightMenuComponent';
 import { useState } from 'react';
 
