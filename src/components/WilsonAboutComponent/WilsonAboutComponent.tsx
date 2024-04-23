@@ -18,7 +18,7 @@ const WilsonAboutComponent = () => {
           <br></br>
           <br></br>
 
-          Currently, I am job-seeking for in-person positions in the <b>Greater Toronto Area</b> area as well as remote work. Hope you enjoy my portfolio and feel free to reach out! Always looking for opportunities to learn and grow.
+          Currently, I am working at Volante Systems as a Software Engineer helping build POS systems for businesses! Hope you enjoy my portfolio and feel free to reach out. Always looking for opportunities to learn and grow.
         </div>
 
         <WilsonSkillsLayoutComponent></WilsonSkillsLayoutComponent>
