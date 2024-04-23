@@ -11,11 +11,20 @@ interface WilsonCareerCardProps {
 }
 
 const WilsonCareerComponent = () => {
-  const [career, setCareer] = useState('UHN');
+  const [career, setCareer] = useState('VS');
 
-  const displayNames = ["UHN", "OPS"];
+  const displayNames = ["VS","UHN", "OPS"];
 
   const content: {[index:string]: WilsonCareerCardProps} = {
+    "VS":{
+      position:'Software Engineer',
+      company:'Volante Systems - V7 Team',
+      dateRange:'April 2024 - Present',
+      description:[
+        'WORK IN PROGRESS'
+      ],
+      skills:[]
+    },
     "UHN":{
       position:'Full-Stack Team Lead and Python Developer (Intern)',
       company:'University Health Network - Kidney Health Education and Research Group',
