@@ -21,9 +21,9 @@ const WilsonCareerComponent = () => {
       company:'Volante Systems - V7 Team',
       dateRange:'April 2024 - Present',
       description:[
-        'WORK IN PROGRESS'
+        'Working in Progress, check back soon for updates!'
       ],
-      skills:[]
+      skills:['Java', 'Java Swing', 'JavaFX', 'Java AWT']
     },
     "UHN":{
       position:'Full-Stack Team Lead and Python Developer (Intern)',
