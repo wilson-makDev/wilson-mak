@@ -93,7 +93,7 @@ const SecurityQuestions: React.FC = () => {
                     {allCorrect && <button type="submit">Submit</button>}
                 </form>
                 {showHappyGif && <img src='/gifs/happy-cat-happy-happy-cat.gif' alt='Happy Cat' className="happy-cat" />}
-                {showFinalMessage && <p>OMG it is for sure for Sarah, I have a question....</p>}
+                {showFinalMessage && <p>I have a question....</p>}
             </div>
         </div>
     );

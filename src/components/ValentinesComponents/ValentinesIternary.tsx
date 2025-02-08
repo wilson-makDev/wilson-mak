@@ -29,7 +29,7 @@ const ValentinesIternary: React.FC = () => {
                 />
             );
             setHearts((hearts) => [...hearts, newHeart]);
-        }, 2000);
+        }, 1000);
 
         return () => clearInterval(interval);
     }, []);
