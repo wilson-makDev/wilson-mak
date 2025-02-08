@@ -1,0 +1,27 @@
+.valentines-iternary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    background-color: #fff5f8; // Light blush background
+
+    h1 {
+        color: #d45a6b; // Rose color
+        margin-bottom: 20px;
+        font-family: 'Lora', serif;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            color: #d45a6b; // Rose color
+            font-family: 'Lora', serif;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { useSprings, animated } from '@react-spring/web';
+import ValentinesIternary from './ValentinesIternary';
 import './ValentinesPlease.scss';
 
 interface ClampFunction {
@@ -12,7 +14,10 @@ const clamp: ClampFunction = function(value, min, max) {
 
 const ValentinesPlease: React.FC = () => {
     const controls = useAnimation();
-const [showCorgi, setShowCorgi] = useState(false);
+    const [showCorgi, setShowCorgi] = useState(false);
+    const [falling, setFalling] = useState(false);
+    const [showCatBop, setShowCatBop] = useState(false);
+    const [navigate, setNavigate] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -43,20 +48,50 @@ const [showCorgi, setShowCorgi] = useState(false);
         }, 3000);
     };
 
+    const handleYesClick = () => {
+        setFalling(true);
+        setTimeout(() => {
+            setShowCatBop(true);
+setTimeout(() => {
+                setNavigate(true);
+            }, 3000);
+        }, 2000);
+    };
+
+    const elements = [
+        <img src="/gifs/dog-smile.gif" alt="Dog Smile" className="dog-smile" key="dog-smile"/>,
+        <h2 key="valentines-question">Would you be my Valentines?</h2>,
+        <button className="yes-button" onClick={handleYesClick} key="yes-button">Yes</button>,
+        <motion.button className="no-button" animate={controls} onClick={handleNoClick} key="no-button">No</motion.button>
+    ];
+
+    const [springs, api] = useSprings(elements.length, index => ({
+        from: { y: 0, opacity: 1 },
+        to: { y: falling ? window.innerHeight + 100 : 0, opacity: falling ? 0 : 1 },
+        config: { mass: 1, tension: 280, friction: 60 }
+    }));
+
+    useEffect(() => {
+        if (falling) {
+            api.start((index) => ({
+                to: async (next) => {
+                    await next({ y: window.innerHeight + 100, opacity: 0 });
+                }
+            }));
+        }
+    }, [falling, api]);
+
+    if (navigate) {
+        return <ValentinesIternary />;
+    }
+
     return (
         <div className="valentines-please-container">
-<img src="/gifs/dog-smile.gif" alt="Dog Smile" className="dog-smile" />
-            <h2>Would you be my Valentines?</h2>
-            <div className="buttons-container">
-                <button className="yes-button">Yes</button>
-                <motion.button
-                    className="no-button"
-                    animate={controls}
-onClick={handleNoClick}
-                >
-                    No
-                </motion.button>
-            </div>
+{springs.map((style, index) => (
+                <animated.div key={index} style={style}>
+                    {elements[index]}
+                </animated.div>
+            ))}
 {showCorgi && (
                 <motion.div
                     className="corgi-container"
@@ -67,6 +102,17 @@ onClick={handleNoClick}
                 >
                     <img src="/gifs/scuze-corgi.gif" alt="Scuze Corgi" />
                     <p>Nice try buddy</p>
+                </motion.div>
+            )}
+{showCatBop && (
+                <motion.div
+                    className="cat-bop-container"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <img src="/gifs/cat-bop.gif" alt="Cat Bop" />
+                    <p>LETS GOOO</p>
                 </motion.div>
             )}
         </div>

@@ -83,4 +83,23 @@
             margin-top: 10px;
         }
     }
+
+    .cat-bop-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+        p {
+            color: #d45a6b; // Rose color
+            font-family: 'Lora', serif;
+            margin-top: 10px;
+        }
+    }
 }
