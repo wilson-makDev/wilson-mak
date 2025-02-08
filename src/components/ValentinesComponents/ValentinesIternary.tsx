@@ -5,10 +5,10 @@ const ValentinesIternary: React.FC = () => {
     const [activeItem, setActiveItem] = useState<{ title: string, description: string } | null>(null);
 
     const itineraryItems = [
-        { time: '10:00 AM', title: 'Head Downtown', description: 'On the commute.' },
-        { time: '12:00 PM', title: 'Secret Event', description: 'Oooo what we doin...' },
-        { time: '7:00 PM', title: 'Dinner', description: 'Big back time.' },
-        { time: '9:00 PM', title: 'Free Time', description: 'Relax and enjoy some free time together.' }
+        { time: '5:00 PM', title: 'Head Downtown', description: 'On the commute.' },
+        { time: '6:00 PM', title: 'Secret Event', description: 'Oooo what we doin...' },
+        { time: '8:30 PM', title: 'Dinner', description: 'Big back time. (Details below)' },
+        { time: '10:00 PM', title: 'Free Time', description: 'IZ just you and me bb.' }
     ];
 
     const handleItemClick = (item: { title: string, description: string }) => {
@@ -29,7 +29,7 @@ const ValentinesIternary: React.FC = () => {
                 />
             );
             setHearts((hearts) => [...hearts, newHeart]);
-        }, 1000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
@@ -53,6 +53,16 @@ const ValentinesIternary: React.FC = () => {
                     <div className="info-card">
                         <h2>{activeItem.title}</h2>
                         <p>{activeItem.description}</p>
+                        {activeItem.title === 'Head Downtown' && (
+                            <div className="head-downtown-content">
+                                <img src="/gifs/driving.gif" alt="Driving" />
+                            </div>
+                        )}
+                        {activeItem.title === 'Secret Event' && (
+                            <div className="secret-event-content">
+                                <img src="/gifs/stellarnushu.gif" alt="Stellar Nushu" />
+                            </div>
+                        )}
                         {activeItem.title === 'Dinner' && (
                             <div className="dinner-content">
                                 <img src="/gifs/cat-eat.gif" alt="Cat Eating" />
@@ -61,16 +71,22 @@ const ValentinesIternary: React.FC = () => {
                                 <img src="/gifs/DinnerLocation.png" alt="Dinner Location" className="dinner-location" />
                                 <ul className="dinner-details">
                                     <li>Location: Fancy Restaurant</li>
-                                    <li>Time: 7:00 PM</li>
-                                    <li>Dress Code: Formal</li>
-                                    <li>Menu: 3-course meal</li>
+                                    <li>Dress Code: Cute and Comfy</li>
+                                    <li>Menu: 6-course meal</li>
+                                    <li>Cost: Free for you lil homie</li>
+                                    <li>Weather: High -7, Low -23 Celsius</li>
                                 </ul>
+                            </div>
+                        )}
+                        {activeItem.title === 'Free Time' && (
+                            <div className="free-time-content">
+                                <img src="/gifs/scuze-corgi.gif" alt="Scuze Corgi" />
                             </div>
                         )}
                     </div>
                 )}
             </div>
-            <a href="https://calendar.google.com" className="calendar-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendar.app.google/EhKBRNhXaLpsN331A" className="calendar-link" target="_blank" rel="noopener noreferrer">
                 Add to Calendar
             </a>
         </div>
