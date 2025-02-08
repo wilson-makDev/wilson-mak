@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom';
+import ValentinesMainComponent from './components/ValentinesComponents/ValentinesMainComponent';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/toMyValentines',
-    element: <App />
+    element: <ValentinesMainComponent />
   }
 ]);
 
