@@ -16,8 +16,8 @@ const SecurityQuestions: React.FC = () => {
 
     const correctAnswers = {
         question1: 'blue',
-        question2: 'fluffy',
-        question3: 'smith'
+        question2: 'medieval times',
+        question3: 'amber'
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +69,7 @@ const SecurityQuestions: React.FC = () => {
                         {isCorrect('question1', answers.question1) && <span className="check-mark">✔</span>}
                     </div>
                     <div className="question-container">
-                        <label htmlFor="question2">What is your pet&apos;s name?</label>
+                        <label htmlFor="question2">Where was our first date?</label>
                         <input
                             type="text"
                             id="question2"
@@ -80,7 +80,7 @@ const SecurityQuestions: React.FC = () => {
                         {isCorrect('question2', answers.question2) && <span className="check-mark">✔</span>}
                     </div>
                     <div className="question-container">
-                        <label htmlFor="question3">What is your mother&apos;s maiden name?</label>
+                        <label htmlFor="question3">Sunlight through  _ _ _ _ _? (Eyes)</label>
                         <input
                             type="text"
                             id="question3"
