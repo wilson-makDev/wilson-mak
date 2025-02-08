@@ -5,110 +5,193 @@ $secondary-color: #f7cac9; // Light coral
 $background-color: #fff5f8; // Light blush
 $text-color: #d45a6b; // Rose
 $accent-color: #e6a6b0; // Light rose
+$check-mark-color: #28a745; // Green
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Lora', serif;
-    background-color: $background-color;
-}
-
-.valentines-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-h1, h2 {
-    color: $text-color;
-    margin: 10px 0;
-    font-weight: 700;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px 0;
-}
-
-label {
-    color: $text-color;
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-
-input[type="password"] {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid $primary-color;
-    border-radius: 5px;
-    width: 100%;
-    font-family: 'Lora', serif;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Lora', serif;
-
-    &:hover {
-        background-color: $secondary-color;
+.valentines-theme {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lora', serif;
+        background-color: $background-color;
     }
 
-    &:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
+    .valentines-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
     }
-}
 
-p {
-    color: $accent-color;
-    margin-top: 20px;
-    font-family: 'Lora', serif;
-}
-
-.angry-cat, .happy-cat {
-    position: fixed;
-    bottom: -200px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    animation: slide-up 0.5s forwards, slide-down 0.5s forwards 2s;
-}
-
-@keyframes slide-up {
-    to {
-        bottom: 20px;
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
-}
 
-@keyframes slide-down {
-    to {
+    h1, h2 {
+        color: $text-color;
+        margin: 10px 0;
+        font-weight: 700;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 0;
+    }
+
+    label {
+        color: $text-color;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+
+    input[type="password"], input[type="text"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+        width: 100%;
+        font-family: 'Lora', serif;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-family: 'Lora', serif;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+
+        &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+
+    p {
+        color: $accent-color;
+        margin-top: 20px;
+        font-family: 'Lora', serif;
+    }
+
+    .angry-cat, .happy-cat {
+        position: fixed;
         bottom: -200px;
-        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        animation: slide-up 0.5s forwards, slide-down 0.5s forwards 4.5s;
+    }
+
+    @keyframes slide-up {
+        to {
+            bottom: 20px;
+        }
+    }
+
+    @keyframes slide-down {
+        to {
+            bottom: -200px;
+            display: none;
+        }
+    }
+
+    .security-questions-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+
+        h2 {
+            color: $text-color;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: $text-color;
+            margin: 10px 0;
+            font-weight: 400;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+
+            .question-container {
+                position: relative;
+                margin-bottom: 20px;
+                width: 100%;
+
+                label {
+                    color: $text-color;
+                    margin-bottom: 10px;
+                    font-weight: 400;
+                    display: block;
+                }
+
+                input[type="text"] {
+                    padding: 10px;
+                    border: 1px solid $primary-color;
+                    border-radius: 5px;
+                    width: 100%;
+                    font-family: 'Lora', serif;
+                }
+
+                .check-mark {
+                    position: absolute;
+                    right: 10px;
+                    top: 35px;
+                    color: $check-mark-color;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .valentines-please-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+
+        h2 {
+            color: $text-color;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: $text-color;
+            margin: 10px 0;
+            font-weight: 400;
+        }
     }
 }
