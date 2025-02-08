@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .app-container {
+background-color: #ffffff;
 @media only screen and (min-width:$bp-tablet) {
   padding-top: 3vw;
 
