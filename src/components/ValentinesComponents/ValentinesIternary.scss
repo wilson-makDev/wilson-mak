@@ -7,6 +7,8 @@
     text-align: center;
     height: 100vh;
     background-color: #fff5f8; // Light blush background
+    position: relative;
+    overflow: hidden;
 
     h1 {
         color: #d45a6b; // Rose color
@@ -14,14 +16,152 @@
         font-family: 'Lora', serif;
     }
 
+    .itinerary-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+                overflow-y: auto;
+        z-index: 1; // Ensure the itinerary list is above the hearts
+    }
+
     ul {
         list-style-type: none;
         padding: 0;
+        margin: 0;
 
         li {
             color: #d45a6b; // Rose color
             font-family: 'Lora', serif;
             margin-bottom: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #f4a7b9; // Soft pink
+            }
+        }
+    }
+
+    .info-card {
+        margin-top: 20px;
+        background-color: #fff;
+        border: 1px solid #d45a6b; // Rose color
+        border-radius: 5px;
+        padding: 20px;
+        width: 300px;
+        max-height: 500px;
+        overflow-y: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1; // Ensure the info card is above the hearts
+
+        h2 {
+            margin: 0 0 10px;
+            color: #d45a6b; // Rose color
+            font-family: 'Lora', serif;
+        }
+
+        p {
+            margin: 0;
+            color: #d45a6b; // Rose color
+            font-family: 'Lora', serif;
+        }
+
+        .dinner-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            overflow-y: visible;
+
+            img {
+                width: 100px;
+                height: auto;
+                margin: 5px;
+            }
+
+            .dinner-location {
+                width: 200px; // Larger width for the DinnerLocation image
+                height: auto;
+                margin-top: 10px;
+            }
+
+            p {
+                margin-top: 10px;
+                color: #d45a6b; // Rose color
+                font-family: 'Lora', serif;
+            }
+
+            .dinner-details {
+                list-style-type: disc;
+                padding-left: 20px;
+                text-align: left;
+                margin-top: 10px;
+
+                li {
+                    color: #d45a6b; // Rose color
+                    font-family: 'Lora', serif;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #d45a6b; // Rose color
+        transform: rotate(45deg);
+        animation: float 10s infinite; // Slower animation
+        z-index: 0; // Ensure the hearts are behind everything else
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d45a6b; // Rose color
+            border-radius: 50%;
+        }
+
+        &:before {
+            top: -10px;
+            left: 0;
+        }
+
+        &:after {
+            top: 0;
+            left: -10px;
+        }
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(100vh) rotate(45deg); // Start from the bottom
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(0) rotate(45deg); // Move upwards
+            opacity: 0;
+        }
+    }
+
+    .calendar-link {
+        position: absolute;
+        bottom: 20px;
+        color: #d45a6b; // Rose color
+        font-family: 'Lora', serif;
+        text-decoration: none;
+        font-size: 16px;
+        background-color: #fff;
+        padding: 10px 20px;
+        border: 1px solid #d45a6b; // Rose color
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #f4a7b9; // Soft pink
         }
     }
 }
